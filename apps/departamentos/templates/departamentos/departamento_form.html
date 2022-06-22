@@ -3,10 +3,13 @@
 
 {% block main %}
 
+  Create / Edit
     <form method="post">
         {% csrf_token %}
-        {{ form|bootstrap }}
-        <button type="submit" class="btn btn-info">Login</button>
+
+        {{  form|bootstrap }}
+
+        <button type="submit" class="btn btn-primary">Salvar</button>
     </form>
 
 {% endblock %}
