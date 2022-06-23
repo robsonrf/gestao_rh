@@ -7,6 +7,11 @@
          | <a href="{% url 'delete_funcionario' funcionario.id %}">Deletar </a><br>
     {% endfor %}
 
+    {% if not object_list %}
+        <h6>Nenhum registro encontrado.</h6>
+    {% endif %}
+
+
     <a href="{% url 'create_funcionario' %}" class="btn btn-info">Novo</a>
 
 {% endblock %}

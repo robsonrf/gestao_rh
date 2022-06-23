@@ -24,6 +24,7 @@ urlpatterns = [
     path('departamentos/', include('apps.departamentos.urls')),
     path('empresa/', include('apps.empresas.urls')),
     path('documento/', include('apps.documentos.urls')),
+    path('horas-extras/', include('apps.registro_hora_extra.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # usado em desenv. para ver os arquivos staticos no admin

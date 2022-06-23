@@ -12,6 +12,10 @@
         <br>
     {% endfor %}
 
+    {% if not object_list %}
+        <h6>Nenhum registro encontrado.</h6>
+    {% endif %}
+
     <a href="{% url 'create_departamento' %}" class="btn btn-info">Novo</a>
 
 {% endblock %}
