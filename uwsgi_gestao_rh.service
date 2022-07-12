@@ -1,0 +1,16 @@
+[Unit]
+Description=uWSGI Djang Gestao RH
+After=syslog.target
+
+[Service]
+ExecStart=/home/ubuntu/venv/bin/uwsgi --emperor /etc/uwsgi/vassals --uid www-data --gid www-data
+RuntimeDirectory=uwsgi
+Restart=always
+KillSignal=SIGQUIT
+Type=notify
+StandardError=syslog
+NotifyAccess=All
+User=ubuntu
+
+[Install]
+WantedBy=mult-user.target
